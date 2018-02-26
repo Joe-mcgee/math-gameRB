@@ -10,5 +10,13 @@ class Turn
 
   def question
     question = Question.new(@current)
+    answer = question.create
+    puts answer
+    if answer == true
+      return true
+    else
+      return false
+    end
+
   end
 end

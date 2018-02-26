@@ -5,7 +5,7 @@ require './Turn.rb'
 
 new_game = Game.new
 
-puts new_game.player1.life
+new_game.play
 
 
 

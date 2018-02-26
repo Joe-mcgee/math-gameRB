@@ -24,7 +24,18 @@ class Game
 
   def play
     while @player1.life > 0 && @player2.life > 0 do
-      turn = Turn.new(player)
+      turn = Turn.new(@player1)
+      turn.begin
+      result = turn.question
+      if result == false
+        @player1.lose_life
+      end
+      turn2 = Turn.new(@player2)
+      turn2.begin
+      result2 = turn2.question
+      if result = false
+        @player2.lose_life
+      end
     end
   end
 end
