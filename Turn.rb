@@ -13,8 +13,10 @@ class Turn
     answer = question.create
     puts answer
     if answer == true
+      puts "#{@current.name}: Correct!"
       return true
     else
+      puts "#{@current.name}: Seriously? No!"
       return false
     end
 
